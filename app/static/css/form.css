@@ -34,6 +34,30 @@
     background: linear-gradient(90deg, #b39ddb 0%, #7c4dff 100%);
     transform: scale(1.04);
 }
+/* Media query per Redmi Note 11 e dispositivi simili */
+@media (max-width: 600px) {
+    .input-group {
+        margin-bottom: 0.8rem;
+    }
+    
+    .input-group label {
+        margin-bottom: 0.2rem;
+    }
+    
+    .input-group input {
+        padding: 0.5rem;
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .btn, .center-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.8rem;
+        margin: 0.4rem auto 1rem auto;
+    }
+}
+
+/* Mantenere anche la media query esistente per dispositivi molto piccoli */
 @media (max-width: 400px) {
     .btn, .center-btn {
         font-size: 0.95rem;

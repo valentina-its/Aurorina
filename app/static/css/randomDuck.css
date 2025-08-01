@@ -9,6 +9,16 @@ img.random-duck {
     margin-left: auto;
     margin-right: auto;
 }
+/* Media query per Redmi Note 11 e dispositivi simili */
+@media (max-width: 600px) {
+    img.random-duck {
+        max-width: 280px;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Mantenere anche la media query esistente per dispositivi molto piccoli */
 @media (max-width: 400px) {
     img.random-duck {
         max-width: 180px;

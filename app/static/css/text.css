@@ -25,6 +25,27 @@ main p, .random-duck-text {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(124,77,255,0.13);
 }
+/* Media query per Redmi Note 11 e dispositivi simili */
+@media (max-width: 600px) {
+    main p, .random-duck-text {
+        font-size: 1.05rem;
+        margin: 1rem auto;
+        padding: 0.4rem 0.2rem;
+        max-width: 98%;
+    }
+    
+    .error-message {
+        padding: 0.6rem 0.4rem;
+        margin: 0.8rem auto;
+        font-size: 0.95rem;
+    }
+    
+    .error-message img {
+        max-width: 200px;
+    }
+}
+
+/* Mantenere anche la media query esistente per dispositivi molto piccoli */
 @media (max-width: 400px) {
     main p, .random-duck-text {
         font-size: 0.95rem;

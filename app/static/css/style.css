@@ -81,6 +81,39 @@ footer {
 *, *::before, *::after {
     box-sizing: border-box;
 }
+/* Media query per Redmi Note 11 e dispositivi simili */
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    header {
+        padding: 1rem 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    main {
+        padding: 1rem 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    footer {
+        padding: 0.8rem 0.5rem;
+        margin-top: 1rem;
+    }
+}
+
+/* Mantenere anche la media query esistente per dispositivi molto piccoli */
 @media (max-width: 400px) {
     header {
         font-size: 1.1rem;
