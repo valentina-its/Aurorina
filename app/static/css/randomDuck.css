@@ -1,0 +1,18 @@
+/* randomDuck.css: solo regole specifiche per la papera random */
+img.random-duck {
+    display: block;
+    max-width: 320px;
+    width: 90%;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(179,136,235,0.13);
+    margin-bottom: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 400px) {
+    img.random-duck {
+        max-width: 180px;
+        border-radius: 8px;
+        margin-bottom: 0.7rem;
+    }
+}
