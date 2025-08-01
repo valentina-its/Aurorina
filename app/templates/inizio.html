@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="it">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Inizio dell'avventura</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/text.css">
-    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/text.css">
+    <link rel="stylesheet" href="/static/css/form.css">
 </head>
 <body>
     <header>
@@ -14,7 +14,7 @@
     </header>
     <main>
         <p>Se sei pronta a partire allora inserisci come username il nome con cui <strong>ti ho salvata</strong> e come password <strong>"BuonCompleanno!"</strong></p>
-        <form th:action="@{/inizio}" method="post">
+        <form action="{{ url_for('tesoro.inizio') }}" method="post">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required autocomplete="username">
@@ -24,7 +24,9 @@
                 <input type="password" id="password" name="password" required autocomplete="current-password">
             </div>
             <button type="submit" class="btn center-btn">Accedi</button>
-            <div th:if="${errorMessage}" class="error-message" th:utext="${errorMessage}"></div>
+            {% if errorMessage %}
+            <div class="error-message">{{ errorMessage|safe }}</div>
+            {% endif %}
         </form>
     </main>
     <footer>

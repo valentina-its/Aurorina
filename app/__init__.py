@@ -1,7 +1,5 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from app.controllers import sfida_controller
-app.register_blueprint(sfida_controller.bp)
 
 db = SQLAlchemy()
 
@@ -11,6 +9,11 @@ def create_app():
     app.config['SECRET_KEY'] = 'chiave-segreta-tesoro'
     
     db.init_app(app)
+    
+    from app.controllers import sfida_controller, duck_controller, tesoro_controller
+    app.register_blueprint(sfida_controller.bp)
+    app.register_blueprint(duck_controller.bp)
+    app.register_blueprint(tesoro_controller.bp)
     
     with app.app_context():
         db.create_all()

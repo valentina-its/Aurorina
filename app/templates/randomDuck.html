@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Papera Random</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/text.css">
-    <link rel="stylesheet" href="/css/randomDuck.css">
-    <link rel="icon" href="/img/duck-icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/text.css">
+    <link rel="stylesheet" href="/static/css/randomDuck.css">
+    <link rel="icon" href="/static/img/duck-icon.png" type="image/png">
 </head>
 <body>
     <header>
         <h1>Papera Random</h1>
     </header>
     <main>
-        <img th:src="@{'/img/' + ${duckImg}}" alt="Papera random" class="random-duck">
+        <img src="{{ url_for('static', filename='img/' + duckImg) }}" alt="Papera random" class="random-duck">
         <p class="random-duck-text">
             Non hai inquadrato il QR code giusto, bevi un goccio d'acqua e continua a cercare quello giusto!
         </p>

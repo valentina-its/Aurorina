@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="it">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/text.css">
 </head>
 <body>
     <header>
@@ -17,7 +17,7 @@
             Come hai scelto te sarà un'avventura ibrida, quindi ti servirà il tuo <strong>telefono</strong> e la tua voglia di camminare ed <strong>esplorare.</strong>
         </p>
         <div style="display:flex;justify-content:center;margin-top:2.2rem;">
-            <a th:href="@{/inizio}" class="btn center-btn" style="min-width:160px;font-size:1.15rem;letter-spacing:1px;box-shadow:0 4px 16px rgba(124,77,255,0.18);padding:1rem 2.5rem;">Inizia l'avventura</a>
+            <a href="{{ url_for('tesoro.inizio') }}" class="btn center-btn" style="min-width:160px;font-size:1.15rem;letter-spacing:1px;box-shadow:0 4px 16px rgba(124,77,255,0.18);padding:1rem 2.5rem;">Inizia l'avventura</a>
         </div>
     </main>
     <footer>
