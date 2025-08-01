@@ -8,7 +8,7 @@ def inizio():
         username = request.form.get('username')
         password = request.form.get('password')
         
-        if username == 'Aurora' and password == 'BuonCompleanno!':
+        if username == 'BadGirl' and password == 'BuonCompleanno!':
             return redirect(url_for('sfide.prima_sfida'))
         else:
             return render_template('inizio.html', errorMessage='Username o password non corretti!')

@@ -36,3 +36,19 @@ def seconda_sfida():
         return render_template('secondaSfida.html', esito=esito)
     
     return render_template('secondaSfida.html')
+
+@bp.route('/TerzaSfida', methods=['GET', 'POST'])
+def terza_sfida():
+    if request.method == 'POST':
+        risposta = request.form.get('risposta', '').lower().strip()
+        # Definisci qui la risposta corretta per la terza sfida
+        soluzione = 'risposta_corretta_terza_sfida'
+        
+        if risposta == soluzione:
+            # Reindirizza alla pagina successiva o mostra un messaggio di successo
+            return redirect(url_for('duck.show_duck_right'))
+        else:
+            # Mostra un messaggio di errore
+            return render_template('terzaSfida.html', esito='Risposta errata. Riprova!')
+    
+    return render_template('terzaSfida.html')

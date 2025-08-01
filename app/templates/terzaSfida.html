@@ -20,6 +20,9 @@
                 <button type="submit" class="btn center-btn">Invia</button>
             </div>
         </form>
+        {% if esito %}
+        <div class="error-message">{{ esito|safe }}</div>
+        {% endif %}
         <button class="btn center-btn" onclick="location.href='{{ url_for('duck.show_duck_right') }}'">Vai alla sfida successiva</button>
     </main>
     <footer>
