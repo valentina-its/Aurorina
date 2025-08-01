@@ -2,8 +2,8 @@
 main p, .random-duck-text {
     text-align: center;
     font-size: 1.18rem;
-    margin: 1.2rem auto 1.2rem auto;
-    padding: 0.5rem 0.2rem;
+    margin: 0.5rem auto;
+    padding: 0;
     color: #4a148c;
     line-height: 1.5;
     max-width: 95%;

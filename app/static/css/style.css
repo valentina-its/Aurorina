@@ -28,10 +28,11 @@ h1, h2 {
 main {
     width: 94vw;
     max-width: 340px;
-    margin: 1.2rem auto;
+    margin: 0.5rem auto;
     background: #fff;
     border-radius: 14px;
     box-shadow: 0 2px 12px rgba(179, 136, 235, 0.13);
+    padding: 0.5rem 0.7rem 0 0.7rem;
     align-self: center;
     color: #000;
     flex: 1 0 auto;
