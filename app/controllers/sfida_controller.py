@@ -11,6 +11,7 @@ def prima_sfida():
             'cs=a-p',
             'capitale sociale = attività - passività',
             'capitale=attività-passività'
+            'capitalesociale=attivita-passivita'
         ]
         
         if risposta in risposte_corrette:

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/text.css">
     <link rel="stylesheet" href="/static/css/randomDuck.css">
+    <link rel="stylesheet" href="/static/css/form.css">
 </head>
 <body>
     <header>
@@ -23,7 +24,7 @@
         {% if esito %}
         <div class="error-message">{{ esito|safe }}</div>
         {% endif %}
-        <button class="btn center-btn" onclick="location.href='{{ url_for('duck.show_duck_right') }}'">Vai alla sfida successiva</button>
+
     </main>
     <footer>
         <p>&copy; 2025 Tesoro. Tutti i diritti riservati.</p>

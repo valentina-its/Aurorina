@@ -11,7 +11,7 @@ def inizio():
         if username == 'BadGirl' and password == 'BuonCompleanno!':
             return redirect(url_for('sfide.prima_sfida'))
         else:
-            return render_template('inizio.html', errorMessage='Username o password non corretti!')
+            return render_template('inizio.html', errorMessage='Faccia da schiaffi non ti ricordi come ti ho salvata?? PS. non è "Faccia da schiaffi"')
     
     return render_template('inizio.html')
 
