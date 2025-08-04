@@ -14,20 +14,20 @@
         <h1>Terza Sfida</h1>
     </header>
     <main>
-        <p>Sei pronto per la terza sfida? Ecco il tuo indovinello:</p>
-        <form class="form-center" action="{{ url_for('sfide.terza_sfida') }}" method="post">
-            <div class="input-group">
-                <input type="text" id="risposta" name="risposta" placeholder="Scrivi la risposta qui..." autocomplete="off" />
-                <button type="submit" class="btn center-btn">Invia</button>
-            </div>
-        </form>
-        {% if esito %}
-        <div class="error-message">{{ esito|safe }}</div>
-        {% endif %}
-
+        <p>
+            Bene sei arrivata fin qui, ora arriva una sfida un po' più impegnativa, 
+            o almeno è quello che penso.<br>
+            Ecco il tuo indovinello:
+        </p>
+        <p><strong>
+            Non sono un uccello, ma viaggio leggero,<br>
+            con becco e piume, ma non faccio pensiero.<br>
+            Segui le mie tracce, foto qua e là,<br>
+            su Instagram mi trovi… dove sono io qua?</strong>
+        </p>
     </main>
     <footer>
-        <p>&copy; 2025 Aurorina. Tutti i diritti riservati.</p>
+        <p>&copy; 2025 Valentina. Tutti i diritti riservati.</p>
     </footer>
 </body>
 </html>
