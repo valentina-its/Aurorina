@@ -10,7 +10,7 @@ def prima_sfida():
             'capitalesociale=attività-passività',
             'cs=a-p',
             'capitale sociale = attività - passività',
-            'capitale=attività-passività'
+            'capitale=attività-passività',  
             'capitalesociale=attivita-passivita'
         ]
         
@@ -24,32 +24,13 @@ def prima_sfida():
     return render_template('primaSfida.html')
 
 @bp.route('/SecondaSfida', methods=['GET', 'POST'])
-def seconda_sfida():
-    if request.method == 'POST':
-        risposta = request.form.get('risposta')
-        soluzione = 'flag{HaiRisoltoLEnigma}'
-        
-        if risposta and risposta.strip() == soluzione:
-            esito = 'Complimenti! Hai risolto la seconda sfida.'
-        else:
-            esito = 'Risposta errata. Riprova!'
-            
-        return render_template('secondaSfida.html', esito=esito)
-    
+def seconda_sfida():    
     return render_template('secondaSfida.html')
 
-@bp.route('/TerzaSfida', methods=['GET', 'POST'])
+@bp.route('/TerzaSfida')
 def terza_sfida():
-    if request.method == 'POST':
-        risposta = request.form.get('risposta', '').lower().strip()
-        # Definisci qui la risposta corretta per la terza sfida
-        soluzione = 'risposta_corretta_terza_sfida'
-        
-        if risposta == soluzione:
-            # Reindirizza alla pagina successiva o mostra un messaggio di successo
-            return redirect(url_for('duck.show_duck_right'))
-        else:
-            # Mostra un messaggio di errore
-            return render_template('terzaSfida.html', esito='Risposta errata. Riprova!')
-    
     return render_template('terzaSfida.html')
+
+@bp.route('/QuartaSfida')
+def quarta_sfida():
+    return render_template('quartaSfida.html')
