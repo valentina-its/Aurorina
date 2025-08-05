@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Terza Sfida Per Andare Avanti</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/text.css">
+        <link rel="stylesheet" href="/static/css/form.css">
+    </head>
+    <body>
+        <header>
+            <a href="{{ url_for('sfide.terza_sfida') }}" class="back-button">
+                <div class="back-arrow">&#8592;</div>
+            </a>
+            <h1>Terza</h1>
+        </header>
+        <main>
+            <p>
+                Questo è lo spazio dove dovrai inserire il codice giusto per poter continuare
+            </p>
+            <form class="form-center" action="{{ url_for('sfide.terza_sfida_2') }}" method="post">
+                <div class="input-group">
+                    <input type="text" id="risposta" name="risposta" placeholder="Inserisci il codice qui..." autocomplete="off" />
+                    <button type="submit" class="btn center-btn">Invia</button>
+                </div>
+            </form>
+            {% if esito %}
+            <div class="error-message">{{ esito|safe }}</div>
+            {% endif %}
+        </main>
+        <footer>
+            <p>&copy; 2025 Valentina. Tutti i diritti riservati.</p>
+        </footer>
+    </body>
+</html>
