@@ -47,3 +47,7 @@ def terza_sfida_2():
 @bp.route('/QuartaSfida')
 def quarta_sfida():
     return render_template('quartaSfida.html')
+
+@bp.route('/QuintaSfida')
+def quinta_sfida():
+    return render_template('quintaSfida.html')
