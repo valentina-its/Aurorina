@@ -10,15 +10,20 @@ body {
 }
 
 header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     background: #b388eb;
     color: #fff;
-    padding: 1.2rem 0 0.7rem 0;
+    padding: 1.2rem 0;
     text-align: center;
     box-shadow: 0 2px 8px rgba(179, 136, 235, 0.1);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 h1, h2 {
+    margin: 0;
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 1.3em;
@@ -43,17 +48,16 @@ main {
 
 footer {
     text-align: center;
-    padding: 1.1rem 0;
+    padding: 0.6rem 0;
     background: #b388eb;
     color: #3d2064;
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 8px 8px;
     box-shadow: 0 -2px 8px rgba(179,136,235,0.1);
-    margin-top: auto;
-    font-size: 0.95rem;
+    margin-top: 0.7rem;
+    font-size: 0.8rem;
     width: 100%;
 }
 
-/* Bottoni generici */
 .btn, .center-btn {
     background: linear-gradient(90deg, #7c4dff 60%, #b39ddb 100%);
     color: #fff;
@@ -64,7 +68,7 @@ footer {
     font-size: 1.1rem;
     font-weight: 700;
     padding: 0.7rem 2.2rem;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     display: block;
     transition: background 0.2s, transform 0.2s;
 }
@@ -74,26 +78,40 @@ footer {
     transform: scale(1.04);
 }
 
-@media (max-width: 400px) {
-    .btn, .center-btn {
-        font-size: 0.95rem;
-        padding: 0.5rem 1.2rem;
-        margin-bottom: 0.7rem;
-    }
+.back-button {
+    position: absolute;
+    left: 1.2rem;
+    top: 1.2rem;
+    text-decoration: none;
+    z-index: 10;
 }
 
-/* base.css: regole generali e layout globale */
+.back-arrow {
+    color: #4a148c;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.back-arrow:hover {
+    transform: scale(1.2);
+    color: #7c4dff;
+}
+
+.arrow {
+    display: inline-block;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
-/* Media query per Redmi Note 11 e dispositivi simili */
+
 @media (max-width: 600px) {
     body {
         padding: 0.5rem;
     }
     
     header {
-        padding: 1rem 0.5rem;
+        padding: 1.3rem 0.5rem;
         margin-bottom: 1rem;
     }
     
@@ -117,57 +135,31 @@ footer {
     }
 }
 
-/* Mantenere anche la media query esistente per dispositivi molto piccoli */
 @media (max-width: 400px) {
     header {
-        font-size: 1.1rem;
-        padding: 0.7rem 0 0.5rem 0;
+        font-size: 1.3rem;
+        padding: 1rem 0 0.8rem 0;
     }
-    /* Media query specifica per Redmi Note 11 */
-    @media (min-width: 401px) and (max-width: 450px) {
-        main {
-            max-width: 92vw;
-        }
-        
-        .btn, .center-btn {
-            font-size: 1.2rem;
-            padding: 0.8rem 2rem;
-            margin-bottom: 0;
-        }
+    
+    .btn, .center-btn {
+        font-size: 0.95rem;
+        padding: 0.5rem 1.2rem;
+        margin-bottom: 0.7rem;
     }
+    
     h1 {
         font-size: 1.8rem;
     }
-    
-    footer {
-        padding: 1rem 0;
-        font-size: 1rem;
+}
+
+@media (min-width: 401px) and (max-width: 450px) {
+    main {
+        max-width: 92vw;
     }
-}
-footer {
-    font-size: 0.8rem;
-    padding: 0.6rem 0;
-    border-radius: 0 0 8px 8px;
-    margin-top: 0.7rem;
-}
-.back-button {
-    position: absolute;
-    left: 1.2rem;
-    top: 1.2rem;
-    text-decoration: none;
-    z-index: 10;
-}
-
-.back-arrow {
-    color: #4a148c;
-    font-size: 2rem;
-    transition: all 0.3s ease;
-}
-
-.back-arrow:hover {
-    transform: scale(1.2);
-    color: #7c4dff;
-}
-.arrow {
-    display: inline-block;
+    
+    .btn, .center-btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
+        margin-bottom: 0;
+    }
 }
