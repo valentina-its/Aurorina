@@ -48,6 +48,22 @@ def terza_sfida_2():
 def quarta_sfida():
     return render_template('quartaSfida.html')
 
-@bp.route('/QuintaSfida')
+@bp.route('/QuintaSfida', methods=['GET', 'POST'])
 def quinta_sfida():
+    if request.method == 'POST':
+        codice = request.form.get('codice', '').strip()
+        soluzione = 'piazza conte rosso'
+        
+        if codice == soluzione:
+            return redirect(url_for('sfide.sesta_sfida'))
+        else:
+            return render_template('quintaSfida.html', 
+                                 esito='&#x2728; <strong>Non ti hanno detto questo le stelle...<br>Ascolta meglio il loro sussurro.</strong> &#x2728;<br>'
+                                    )
+    
     return render_template('quintaSfida.html')
+
+@bp.route('/SestaSfida')
+def sesta_sfida():
+    return render_template('sestaSfida.html')
+    

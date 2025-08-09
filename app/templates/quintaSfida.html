@@ -23,7 +23,7 @@
             ma intreccia profezie dentro melodie che solo i cuori vigili possono decifrare.
         </p>
         <p>
-            Questa canzone che hai davanti non è soltanto musica:<br>
+            Questa canzone che che, dovrai trovare, non è soltanto musica:<br>
             è un frammento del Ponte di Stelle,<br>
             un codice antico nascosto tra rime e silenzi.
         </p>
@@ -38,6 +38,17 @@
             là dove il velo tra i mondi si assottiglia<br>
             e le pietre ricordano nomi che gli uomini hanno dimenticato.
         </p>
+
+         <p>
+            <strong>Inserisci il codice antico che hai trovato:</strong>
+        </p>
+        <form action="{{ url_for('sfide.quinta_sfida') }}" method="post">
+            <input type="text" id="codice" name="codice" required placeholder="Inserisci il codice qui...">
+            <button type="submit">Verifica</button>
+        </form>
+        {% if esito %}
+        <div class="error-message">{{ esito|safe }}</div>
+        {% endif %}
     </main>
     <footer>
         <p>&copy; 2025 Valentina. Tutti i diritti riservati.</p>
