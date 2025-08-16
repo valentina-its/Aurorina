@@ -27,23 +27,6 @@ def prima_sfida():
 def seconda_sfida():    
     return render_template('secondaSfida.html')
 
-@bp.route('/TerzaSfida')
-def terza_sfida():
-    return render_template('terzaSfida.html')
-
-@bp.route('/TerzaSfida2', methods=['GET', 'POST'])
-def terza_sfida_2():
-    if request.method == 'POST':
-        risposta = request.form.get('risposta', '').lower().strip()
-        soluzione = 'flag{TerzaSfida2}'
-        
-        if risposta == soluzione:
-            return redirect(url_for('sfide.quarta_sfida'))
-        else:
-            return render_template('terzaSfida2.html', esito='Risposta errata. Riprova!')
-    
-    return render_template('terzaSfida2.html')
-
 @bp.route('/QuartaSfida')
 def quarta_sfida():
     return render_template('quartaSfida.html')
