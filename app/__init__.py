@@ -2,7 +2,7 @@ from flask import Flask
 
 def create_app():
     app = Flask(__name__,
-                 template_folder='app/templates')
+                 template_folder='templates')
     
     # Registra i blueprint
     from .controllers import tesoro_controller, sfida_controller, duck_controller
