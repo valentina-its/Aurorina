@@ -18,6 +18,7 @@ def show_random_duck():
 def show_duck_right():
     return render_template('duckRight.html')
 
-@bp.route('/duckIndizio')
+@bp.route('/indizioDuck')
+
 def show_duck_indizio():
-    return render_template('./duckIndizio.html')
+    return render_template('indizuiDuck.html')
