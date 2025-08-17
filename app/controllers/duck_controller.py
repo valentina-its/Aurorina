@@ -20,4 +20,4 @@ def show_duck_right():
 
 @bp.route('/duckIndizio')
 def show_duck_indizio():
-    return render_template('duckIndizio.html')
+    return render_template('duckIndizio.html')  # Usa il nome file esistente
