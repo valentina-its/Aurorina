@@ -21,4 +21,4 @@ def show_duck_right():
 @bp.route('/indizioDuck')
 
 def show_duck_indizio():
-    return render_template('indizuiDuck.html')
+    return render_template('indizioDuck.html')
